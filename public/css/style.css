@@ -69,11 +69,7 @@ section {
 .btn:hover {
     background-color: #5a7f63;
 }
-.btn i {
-    margin-right: 6px;
-    vertical-align: middle;
-    color: #fff !important;
-}
+
 .btn-sm i {
     font-size: 0.85rem;
 }
@@ -83,6 +79,20 @@ section {
 .btn-danger i {
     color: white;
 }
+
+/* Ikon hijau tua dalam tombol hijau di Hero section */
+.hero-section .btn-success i {
+  color: #6B9071 !important;
+}
+
+
+/* === ICON DI BUTTON NAVBAR === */
+.navbar .btn i {
+    color: white !important;
+}
+
+
+
 
 /* Outline buttons */
 .btn-outline-primary {

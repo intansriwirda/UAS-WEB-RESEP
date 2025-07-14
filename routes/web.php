@@ -19,6 +19,9 @@ Route::get('/recipe/{id}', [RecipeController::class, 'show'])->name('recipes.sho
 // Review Resep (aman dari konflik)
 Route::post('/recipes/{id}/add-review', [RecipeController::class, 'storeReview'])->name('recipes.review');
 
+Route::post('/recipes/{id}/review', [RecipeController::class, 'reviewStore'])->name('recipes.review.store');
+
+
 // Pencarian
 Route::get('/search', [RecipeController::class, 'search'])->name('recipes.search');
 

@@ -164,21 +164,21 @@ class RecipeController extends Controller
     }
 
     // ✅ Simpan Review
-    public function storeReview(Request $request, $id)
-    {
-        $request->validate([
-            'name' => 'required|string|max:100',
-            'rating' => 'required|integer|min:1|max:5',
-            'comment' => 'required|string|max:1000',
-        ]);
+public function reviewStore(Request $request, $id)
+{
+    $request->validate([
+        'name' => 'required|string|max:100',
+        'comment' => 'required|string',
+        'rating' => 'required|integer|min:1|max:5',
+    ]);
 
-        Review::create([
-            'recipe_id' => $id,
-            'name' => $request->name,
-            'rating' => $request->rating,
-            'comment' => $request->comment,
-        ]);
+    Review::create([
+        'recipe_id' => $id,
+        'name' => $request->name,
+        'comment' => $request->comment,
+        'rating' => $request->rating,
+    ]);
 
-        return redirect()->back()->with('success', 'Ulasan berhasil dikirim!');
-    }
+    return back()->with('success', 'Review berhasil ditambahkan!');
+}
 }
