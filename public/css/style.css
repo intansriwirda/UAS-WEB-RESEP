@@ -49,13 +49,6 @@ section {
     background-size: 80% 80%;
 }
 
-/* === BACKGROUND EFFECT === */
-.bg-blur-light {
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
 
 /* === BUTTON STYLES === */
 .btn {
