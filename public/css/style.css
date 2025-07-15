@@ -48,6 +48,13 @@ section {
 .carousel-control-next-icon {
     background-size: 80% 80%;
 }
+/* === BACKGROUND EFFECT === */
+.bg-blur-light {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 
 /* === BUTTON STYLES === */
@@ -73,9 +80,9 @@ section {
     color: white;
 }
 
-/* Ikon hijau tua dalam tombol hijau di Hero section */
+/* Ikon dalam tombol hijau di Hero section */
 .hero-section .btn-success i {
-  color: #6B9071 !important;
+  color: #C87D6B !important;
 }
 
 
@@ -199,6 +206,23 @@ section img {
 [data-aos] {
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
+
+/* === SMOOTH AOS & HERO IMAGE ZOOM === */
+.hero-image {
+    max-height: 350px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.hero-image:hover {
+    transform: scale(1.05);
+}
+
+[data-aos] {
+    transition-property: opacity, transform;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-in-out;
+}
+
 
 /* === ALERT === */
 .alert {

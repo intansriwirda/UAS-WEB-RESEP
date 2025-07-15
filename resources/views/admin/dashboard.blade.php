@@ -16,7 +16,7 @@
         <div class="col-md-6">
             <div class="card border-primary shadow h-100">
                 <div class="card-body">
-                    <h5 class="card-title text-primary">Manajemen Resep</h5>
+                    <h5 class="card-title text-terracotta">Manajemen Resep</h5>
                     <p class="card-text">Tambah, ubah, atau hapus resep masakan yang tersedia.</p>
                     <a href="{{ route('admin.recipes.index') }}" class="btn btn-outline-primary">Kelola Resep</a>
                 </div>

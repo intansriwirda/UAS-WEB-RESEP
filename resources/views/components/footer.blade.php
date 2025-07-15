@@ -5,7 +5,7 @@
       {{-- Tentang --}}
       <div class="col-md-4 mb-4">
         <h5 class="fw-bold mb-3">
-          <i class="bi bi-egg-fried me-2 text-danger"></i> Resep<span class="text-danger">Enak</span>.
+          <i class="bi bi-egg-fried me-2 text-danger"></i> Resep<span class="text-terracotta">Enak</span>.
         </h5>
         <p class="small">
           ResepEnak adalah platform berbagi resep masakan rumahan, dessert lezat, dan kreasi kuliner lainnya.

@@ -5,7 +5,7 @@
 @section('content')
 <div class="container my-5 bg-pastel-green p-5 rounded-4 shadow-sm">
 
-  <!-- 🖼️ Gambar & Header -->
+  <!-- Gambar & Header -->
   <div class="row align-items-center mb-5">
     <div class="col-md-6 mb-4 mb-md-0">
       <img src="{{ asset('storage/' . $recipe->image) }}"
@@ -51,7 +51,7 @@
     </div>
   </div>
 
-  <!-- 🍳 Bahan & Langkah -->
+  <!-- Bahan & Langkah -->
   <div class="row">
     <!-- Bahan -->
     <div class="col-md-6 mb-4">
@@ -105,7 +105,7 @@
 
 <hr class="my-5">
 
-<h5 class="mb-3">💬 Komentar Pengguna</h5>
+<h5 class="mb-3">Komentar Pengguna</h5>
 
 @if($recipe->reviews->count())
   @foreach($recipe->reviews->sortByDesc('created_at') as $review)

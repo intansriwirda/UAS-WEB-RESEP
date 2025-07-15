@@ -47,7 +47,7 @@
 <!-- Section: Card Resep -->
 <section class="bg-pastel-green py-5">
   <div class="container">
-    <h4 id="recipes" class="fw-bold text-center mb-5 text-green">
+    <h4 id="recipes" class="fw-bold text-center mb-5 text-teracotta">
       <i class="bi bi-egg-fried me-2"></i> Super Delicious
     </h4>
 
@@ -76,30 +76,35 @@
         </div>
 
         <!-- Konten -->
-        <div class="card-body">
-          <h6 class="card-title mb-1 d-flex align-items-center">
-            <i class="bi bi-egg-fried me-2 text-green"></i> {{ $recipe->title }}
-          </h6>
-          <p class="text-muted small mb-2">{{ Str::limit($recipe->description, 60) }}</p>
-
-          <!-- Rating -->
-          @php $avg = $recipe->averageRating(); @endphp
-          <div class="mb-2">
-            @if ($avg > 0)
-              @for ($i = 1; $i <= 5; $i++)
-                <i class="bi {{ $i <= $avg ? 'bi-star-fill text-warning' : 'bi-star text-secondary' }}"></i>
-              @endfor
-              <small class="text-muted">({{ number_format($avg, 1) }})</small>
-            @else
-              <small class="text-muted"><i class="bi bi-emoji-neutral me-1"></i> Belum ada rating</small>
-            @endif
-          </div>
-
-          <!-- Tombol Detail -->
-          <a href="{{ route('recipes.show', $recipe->id) }}" class="btn btn-sm btn-outline-green w-100 mt-2">
-            <i class="bi bi-eye-fill me-1"></i> Lihat Detail
-          </a>
+       <div class="card-body">
+        <!-- Judul Center -->
+        <div class="text-center">
+            <h6 class="card-title mb-1 d-inline-flex align-items-center">
+            <i class="text-green"></i> {{ $recipe->title }}
+            </h6>
         </div>
+
+        <p class="text-muted small mb-2">{{ Str::limit($recipe->description, 60) }}</p>
+
+        <!-- Rating -->
+        @php $avg = $recipe->averageRating(); @endphp
+        <div class="mb-2">
+            @if ($avg > 0)
+            @for ($i = 1; $i <= 5; $i++)
+                <i class="bi {{ $i <= $avg ? 'bi-star-fill text-warning' : 'bi-star text-secondary' }}"></i>
+            @endfor
+            <small class="text-muted">({{ number_format($avg, 1) }})</small>
+            @else
+            <small class="text-muted"><i class="bi bi-emoji-neutral me-1"></i> Belum ada rating</small>
+            @endif
+        </div>
+
+        <!-- Tombol Detail -->
+        <a href="{{ route('recipes.show', $recipe->id) }}" class="btn btn-sm btn-outline-green w-100 mt-2">
+            <i class="bi bi-eye-fill me-1"></i> Lihat Detail
+        </a>
+        </div>
+
       </div>
     </div>
   @endforeach

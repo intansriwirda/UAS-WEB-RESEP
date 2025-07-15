@@ -1,8 +1,8 @@
 @if ($carouselRecipes->count())
 <section class="bg-cream py-5">
   <div class="container">
-    <h4 class="fw-bold text-center mb-5">
-    <i class="bi bi-fire me-2 text-warning"></i>Our Newest Recipes
+    <h4 class="fw-bold text-center mb-5 text-terracotta">
+    <i class="bi bi-fire me-2 text-terracotta"></i>Our Newest Recipes
     </h4>
 
 
